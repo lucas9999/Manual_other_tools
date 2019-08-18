@@ -1,0 +1,45 @@
+# (PART) <lfg>SONAR QUBE</lfg> {-} 
+
+# Installing
+
+* Download sonarqube
+* Doanload sonnar scanner (this is not the  same as sonarqube)
+* Download open jdk 
+* For jdk create environmental variable JAVA_HOME (value: C:\jdk-12.02), and path : C:\jdk-12.02\bin
+* Check if you have access to proper Java in cmd: java -version
+* Unzip sonarqube and sonarscanner in different directories. 
+* Crate environmental path for sonnar scanner bin
+
+# Running
+
+* Run bat file in C:\Program Files\sonarqube-7.9.1\sonarqube-7.9.1\bin\windows-x86-64\StartSonar.bat
+* In Browres start page: http://localhost:9000/
+* Log in with password: admin and login: admin
+
+
+# Project
+
+* After login click icon '+' in right up corner.
+* Give name to new project and click 'set up'
+* generate token
+* select language, OS and you will see blask window with code do copy. Copy it
+* run cmd 
+* go to directory you want to scan
+* in cmd past copied code and press enter
+* on web page after some time new peoject will be created
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

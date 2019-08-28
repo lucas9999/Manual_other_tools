@@ -23,9 +23,9 @@
 * Give name to new project and click 'set up'
 * generate token
 * select language, OS and you will see blask window with code do copy. Copy it
-* run cmd 
+* run new cmd 
 * go to directory you want to scan
-* in cmd past copied code and press enter
+* in cmd past copied code and press enter (if cmd can not find sonar-scanner.bat then provide full path)
 * on web page after some time new peoject will be created
 
 

@@ -59,7 +59,10 @@ git log master
 git remote -v
 
 
-# ustawianie zdalnego repo
+# dodanie zdalnego repo
+git remote add origin  git@github.com:USERNAME/REPOSITORY.git
+
+# zmiana url dla istniejącego polaczenia
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 
 

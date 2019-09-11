@@ -1,4 +1,4 @@
-bookdown::serve_book(dir = ".", output_dir = "_book", preview = TRUE, in_session = TRUE)
+bookdown::serve_book(dir = ".", output_dir = "docs", preview = TRUE, in_session = TRUE)
 
 # shell.exec(paste0(getwd(), '/_book/index.html' ) )
 # 
@@ -9,3 +9,5 @@ bookdown::serve_book(dir = ".", output_dir = "_book", preview = TRUE, in_session
 
 # Inline-style: 
 #   ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+

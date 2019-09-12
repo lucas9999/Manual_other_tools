@@ -1,3 +1,79 @@
-# (PART) <lfg>Windows</lfg> {-} 
 
-# chapter
+# Windows
+
+
+## podstawy skladni
+:: komentarz
+
+
+## zmienne
+
+:: nie dawac spacji na okolo znaku '='
+set zmienna=100
+
+:: do zmiennaj odwoluje sie w znalach procentu
+@echo %zmienna%
+
+
+## control flow
+set z=100
+if %z%==100 (@echo ok) else (@echo no_ok)
+
+if exist filename.txt (...) else (...)
+
+
+## odpalanie stron i przeladarem
+start chrome wp.pl
+
+
+
+## przydatne komentu
+
+:: lista zmiennych srodowiskowych
+set 
+
+:: lista zmiennych srodowiskowych z 'PYTH' (uwaga, jest casesensitive)
+set | findstr PTYH
+
+systeminfo
+
+ipconfig
+
+dir
+
+dir *.txt
+
+help
+
+:: help for cd function
+help cd
+:: or
+cd /?
+
+ping www.google.com
+
+:: skojazenia programow z plikami
+assoc
+assoc .py
+
+
+:: informacje o aktualnych polaczeniach 
+netstat
+
+
+
+systeminfo
+
+
+:: You can use the “tasklist” command to provide a current list of all tasks running on your PC
+tasklist
+
+:: zabijanie taskow
+taskkill -pid <numer na taklis-cie>
+
+
+
+
+
+
+

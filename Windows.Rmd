@@ -22,7 +22,7 @@ if %z%==100 (@echo ok) else (@echo no_ok)
 if exist filename.txt (...) else (...)
 
 
-## odpalanie stron i przeladarem
+## odpalanie stron w danej przegladarce
 start chrome wp.pl
 
 

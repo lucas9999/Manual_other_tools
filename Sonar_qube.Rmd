@@ -1,6 +1,6 @@
-# (PART) <lfg>SONAR QUBE</lfg> {-} 
+# SONAR QUBE
 
-# Installing
+## Installing
 
 * Download sonarqube
 * Doanload sonnar scanner (this is not the  same as sonarqube)
@@ -10,14 +10,14 @@
 * Unzip sonarqube and sonarscanner in different directories. 
 * Crate environmental path for sonnar scanner bin
 
-# Running
+## Running
 
 * Run bat file in C:\Program Files\sonarqube-7.9.1\sonarqube-7.9.1\bin\windows-x86-64\StartSonar.bat
 * In Browres start page: http://localhost:9000/
 * Log in with password: admin and login: admin
 
 
-# Project
+## Project
 
 * After login click icon '+' in right up corner.
 * Give name to new project and click 'set up'

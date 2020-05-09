@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 pull vs fetch | Introduction to Python</title>
+  <meta name="description" content="Chapter 4 pull vs fetch | Introduction to Python" />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 pull vs fetch | Introduction to Python" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 pull vs fetch | Introduction to Python" />
+  
+  
+  
+
+<meta name="author" content="Łukasz Muszyński" />
+
+
+<meta name="date" content="2020-05-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="git.html">
+<link rel="next" href="windows.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introdution to Python</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> INTRO</a></li>
+<li class="chapter" data-level="2" data-path="intro-1.html"><a href="intro-1.html"><i class="fa fa-check"></i><b>2</b> INTRO</a></li>
+<li class="chapter" data-level="3" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>3</b> Git</a><ul>
+<li class="chapter" data-level="3.1" data-path="git.html"><a href="git.html#uwagi-rozne"><i class="fa fa-check"></i><b>3.1</b> uwagi rozne</a></li>
+<li class="chapter" data-level="3.2" data-path="git.html"><a href="git.html#logika-git-a"><i class="fa fa-check"></i><b>3.2</b> logika git-a</a></li>
+<li class="chapter" data-level="3.3" data-path="git.html"><a href="git.html#repozytoria"><i class="fa fa-check"></i><b>3.3</b> repozytoria</a></li>
+<li class="chapter" data-level="3.4" data-path="git.html"><a href="git.html#diff"><i class="fa fa-check"></i><b>3.4</b> diff</a></li>
+<li class="chapter" data-level="3.5" data-path="git.html"><a href="git.html#tracking"><i class="fa fa-check"></i><b>3.5</b> tracking</a></li>
+<li class="chapter" data-level="3.6" data-path="git.html"><a href="git.html#gitignore"><i class="fa fa-check"></i><b>3.6</b> gitignore</a></li>
+<li class="chapter" data-level="3.7" data-path="git.html"><a href="git.html#stage"><i class="fa fa-check"></i><b>3.7</b> stage</a></li>
+<li class="chapter" data-level="3.8" data-path="git.html"><a href="git.html#branches"><i class="fa fa-check"></i><b>3.8</b> branches</a></li>
+<li class="chapter" data-level="3.9" data-path="git.html"><a href="git.html#commits-podstawy"><i class="fa fa-check"></i><b>3.9</b> commits-podstawy</a></li>
+<li class="chapter" data-level="3.10" data-path="git.html"><a href="git.html#commits---funkcja-log-wyswietla-liste-commitow"><i class="fa fa-check"></i><b>3.10</b> commits - funkcja log (wyswietla liste commitow)</a></li>
+<li class="chapter" data-level="3.11" data-path="git.html"><a href="git.html#commits--wskazniki"><i class="fa fa-check"></i><b>3.11</b> commits -wskazniki</a></li>
+<li class="chapter" data-level="3.12" data-path="git.html"><a href="git.html#revert-vs-reset"><i class="fa fa-check"></i><b>3.12</b> revert vs reset</a></li>
+<li class="chapter" data-level="3.13" data-path="git.html"><a href="git.html#squash"><i class="fa fa-check"></i><b>3.13</b> squash</a></li>
+<li class="chapter" data-level="3.14" data-path="git.html"><a href="git.html#merge"><i class="fa fa-check"></i><b>3.14</b> merge</a></li>
+<li class="chapter" data-level="3.15" data-path="git.html"><a href="git.html#rebase"><i class="fa fa-check"></i><b>3.15</b> rebase</a></li>
+<li class="chapter" data-level="3.16" data-path="git.html"><a href="git.html#stash"><i class="fa fa-check"></i><b>3.16</b> stash</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="pull-vs-fetch.html"><a href="pull-vs-fetch.html"><i class="fa fa-check"></i><b>4</b> pull vs fetch</a><ul>
+<li class="chapter" data-level="4.1" data-path="pull-vs-fetch.html"><a href="pull-vs-fetch.html#inne-komendy"><i class="fa fa-check"></i><b>4.1</b> Inne komendy</a></li>
+<li class="chapter" data-level="4.2" data-path="pull-vs-fetch.html"><a href="pull-vs-fetch.html#smietnik"><i class="fa fa-check"></i><b>4.2</b> smietnik</a></li>
+</ul></li>
+<li class="part"><span><b>I <lfg>SONAR QUBE</lfg></b></span></li>
+<li class="chapter" data-level="5" data-path="windows.html"><a href="windows.html"><i class="fa fa-check"></i><b>5</b> Windows</a><ul>
+<li class="chapter" data-level="5.1" data-path="windows.html"><a href="windows.html#podstawy-skladni"><i class="fa fa-check"></i><b>5.1</b> podstawy skladni</a></li>
+<li class="chapter" data-level="5.2" data-path="windows.html"><a href="windows.html#zmienne"><i class="fa fa-check"></i><b>5.2</b> zmienne</a></li>
+<li class="chapter" data-level="5.3" data-path="windows.html"><a href="windows.html#control-flow"><i class="fa fa-check"></i><b>5.3</b> control flow</a></li>
+<li class="chapter" data-level="5.4" data-path="windows.html"><a href="windows.html#odpalanie-stron-w-danej-przegladarce"><i class="fa fa-check"></i><b>5.4</b> odpalanie stron w danej przegladarce</a></li>
+<li class="chapter" data-level="5.5" data-path="windows.html"><a href="windows.html#przydatne-komentu"><i class="fa fa-check"></i><b>5.5</b> przydatne komentu</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Python</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pull-vs-fetch" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> pull vs fetch</h1>
+<ul>
+<li>‘fetch’ pobiera tylko meta dane ze zdalnego repo. To umożliwia np. zbadanie roznic miedzy repo lokalnym i zdalnym. Potem mozemy wykonac np. merge</li>
+<li>‘pull’ wykonuje ‘fetch’ i ‘merge’ jednoczesnie.</li>
+</ul>
+<div id="inne-komendy" class="section level2">
+<h2><span class="header-section-number">4.1</span> Inne komendy</h2>
+<ul>
+<li><p>Czyszczenie cache</p>
+<pre><code>git rm -r -cached</code></pre></li>
+</ul>
+</div>
+<div id="smietnik" class="section level2">
+<h2><span class="header-section-number">4.2</span> smietnik</h2>
+<p>109</p>
+<p>To see the difference between:</p>
+<p>Your working copy and staging area:</p>
+<p>% git diff
+Staging area and the latest commit:</p>
+<p>% git diff –staged
+Your working copy and commit 4ac0a6733:</p>
+<p>% git diff 4ac0a6733
+Commit 4ac0a6733 and the latest commit:</p>
+<p>% git diff 4ac0a6733 HEAD
+Commit 4ac0a6733 and commit 826793951</p>
+<p>% git diff 4ac0a6733 826793951</p>
+
+</div>
+</div>
+
+
+
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="windows.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"],
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Git.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-Manual_R.pdf", "bookdown-Manual_R.epub"],
+"toc": {
+"collapse": "section",
+"depth": 4
+}
+});
+});
+</script>
+
+</body>
+
+</html>

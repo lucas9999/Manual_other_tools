@@ -158,8 +158,8 @@ git push [nazwa-zdalnego-repo] [nazwa-gałęzi]
 
 # jezeli chce dla wszyskich branchow
 git push --all</code></pre></li>
-<li><p>Wypchniecie zmian z lokalnego repo z aktulanego brancha do repo zdalngo <strong>ZA PIERWSZYM RAZEM</strong>
-Za pierszym razem trzeba ustalic tzw. usptream-branch (Upstream branches define the branch tracked on the remote repository by your local remote branch (also called the remote tracking branch))
+<li><p>Wypchniecie zmian z lokalnego repo z aktulanego brancha do repo zdalngo <strong>ZA PIERWSZYM RAZEM</strong>.</p>
+<p>Za pierszym razem trzeba ustalic tzw. usptream-branch (Upstream branches define the branch tracked on the remote repository by your local remote branch (also called the remote tracking branch))
 <code>git push --set-upstream &lt;remote&gt; &lt;branch&gt;</code></p></li>
 <li><p>pobranie metadanych ze zdalnego repo o branchu np. w celach porownania z lokalnym repo</p>
 <pre><code># dla aktualnego brancha
@@ -234,7 +234,7 @@ git commit -m &quot;.gitignore is now working&quot;</code></pre></li>
 <li><p>ignoruj katalog ‘logs’ z wyjatkiem znajdujacego sie w nim pliku ‘important.log’</p>
 <pre><code>logs/
 !logs/important.log</code></pre></li>
-<li><p>ignoruj wszystkie pliki i katalogii z wyjatkiem pliku ‘module.py’</p>
+<li><p>ignoruj wszystkie pliki i katalogi z wyjatkiem pliku ‘module.py’</p>
 <pre><code>*
 !module.py</code></pre></li>
 <li><p>Reczne jednorazowe zawieszenie ignorowania pliku dla commitu</p>
@@ -245,7 +245,7 @@ git commit -m &quot;Force adding debug.log&quot;</code></pre></li>
 </div>
 <div id="stage" class="section level2">
 <h2><span class="header-section-number">2.7</span> stage</h2>
-<p>Stage to poczelania. Tutaj przechowuje sie tymczasowo modfikacje przez commit-em.
+<p>Stage to poczelania. Tutaj przechowuje sie tymczasowo modyfikacje przed commit-em.
 Stage wystepuje tez pod innymi nazwami z literaturze:
 + Index
 + Cache
@@ -279,8 +279,10 @@ Stage wystepuje tez pod innymi nazwami z literaturze:
 <li><p>usuniecie brancha (dwie metody)</p>
 <pre><code>git branch -d branch_name
 git branch -D branch_name</code></pre>
-<p>The -d option stands for –delete, which would delete the local branch, only if you have already pushed and merged it with your remote branches.
-The -D option stands for –delete –force, which deletes the branch regardless of its push and merge status, so be careful using this one!</p></li>
+<ul>
+<li>The -d option stands for –delete, which would delete the local branch, only if you have already pushed and merged it with your remote branches.</li>
+<li>The -D option stands for –delete –force, which deletes the branch regardless of its push and merge status, so be careful using this one!</li>
+</ul></li>
 <li><p>usuniecie zdalnego brancha</p>
 <pre><code>git push &lt;remote_name&gt; --delete &lt;branch_name&gt;</code></pre></li>
 <li><p>utworzenia zdalnego brancha w oparciu o lokalny:
@@ -307,7 +309,7 @@ $ git push origin stage1:development</code></pre>
 <pre><code>git log </code></pre></li>
 <li><p>modyfikacja do komentarza w ostatniej zmianie</p>
 <pre><code>git commit --amend</code></pre>
-<p>W chodzę w VIM w tryb umozliwiajacy zmiany i poprawiam pierwsza linijke gdzie jest komentarz. Naciskam <esc> i potem :wq i <enter></p></li>
+<p>Wchodzę w VIM w tryb umozliwiajacy zmiany i poprawiam pierwsza linijke gdzie jest komentarz. Naciskam <esc> i potem :wq i <enter></p></li>
 </ul>
 </div>
 <div id="funkcja-log-wyswietla-liste-commitow" class="section level3">
@@ -348,10 +350,8 @@ git log --after=&quot;2014-7-1&quot; --before=&quot;2014-7-4&quot;</code></pre><
 <pre><code>git log --author=&quot;John&quot;</code></pre></li>
 <li><p>po autorze z uzyciem regex:</p>
 <pre><code>git log --author=&quot;John\|Mary&quot;</code></pre></li>
-<li><p>po message:</p></li>
-</ul>
-<pre><code>git log --grep=&quot;JRA-224:&quot;</code></pre>
-<ul>
+<li><p>po message:</p>
+<pre><code>git log --grep=&quot;JRA-224:&quot;</code></pre></li>
 <li><p>po commitach dotyczacych tylko i wylacznie jedngo brancha (nie wyswietla commitow wspoldzielonych z innymi branchami):</p>
 <pre><code>git log master..feature</code></pre>
 <p>Np jesli na poczatku byl tylko branch ‘master’, a potem wydzieli sie od niego nowy branch to ‘master..feature’ zwroci to co sie dzieje na masterze od czasu wydzielenia sie nowego brancha. To co jest przed podzialem jest wspolne dla obu branchy a nie jest unikatowe dla ‘master’, dlatego nie bedzie wyswietlone.</p></li>

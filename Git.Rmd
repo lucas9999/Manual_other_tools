@@ -71,7 +71,8 @@ Podstawowe elementy i czynnosci zwiazane z git-em
   git push --all
   ```
 
-- Wypchniecie zmian z lokalnego repo z aktulanego brancha do repo zdalngo **ZA PIERWSZYM RAZEM**
+- Wypchniecie zmian z lokalnego repo z aktulanego brancha do repo zdalngo **ZA PIERWSZYM RAZEM**.
+  
   Za pierszym razem trzeba ustalic tzw. usptream-branch (Upstream branches define the branch tracked on the remote repository by your local remote branch (also called the remote tracking branch))
     ```
     git push --set-upstream <remote> <branch>
@@ -214,7 +215,7 @@ Nie wszystkie pliki ktore mamy w katalogu repozytorium muszę być śledzone prz
     !logs/important.log
     ```
   
-  + ignoruj wszystkie pliki i katalogii z wyjatkiem pliku 'module.py'
+  + ignoruj wszystkie pliki i katalogi z wyjatkiem pliku 'module.py'
     ```
     *
     !module.py
@@ -232,7 +233,7 @@ Nie wszystkie pliki ktore mamy w katalogu repozytorium muszę być śledzone prz
 
 ## stage
 
-Stage to poczelania. Tutaj przechowuje sie tymczasowo modfikacje przez commit-em.
+Stage to poczelania. Tutaj przechowuje sie tymczasowo modyfikacje przed commit-em.
 Stage wystepuje tez pod innymi nazwami z literaturze:
   + Index
   + Cache
@@ -296,8 +297,8 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
   git branch -d branch_name
   git branch -D branch_name
   ```
-  The -d option stands for --delete, which would delete the local branch, only if you have already pushed and merged it with your remote branches.
-  The -D option stands for --delete --force, which deletes the branch regardless of its push and merge status, so be careful using this one!
+  + The -d option stands for --delete, which would delete the local branch, only if you have already pushed and merged it with your remote branches.
+  + The -D option stands for --delete --force, which deletes the branch regardless of its push and merge status, so be careful using this one!
   
 - usuniecie zdalnego brancha
   ```
@@ -345,7 +346,7 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
   ```
   git commit --amend
   ```
-  W chodzę w VIM w tryb umozliwiajacy zmiany i poprawiam pierwsza linijke gdzie jest komentarz. Naciskam <esc> i potem :wq i <enter> 
+  Wchodzę w VIM w tryb umozliwiajacy zmiany i poprawiam pierwsza linijke gdzie jest komentarz. Naciskam <esc> i potem :wq i <enter> 
 
 
 
@@ -421,9 +422,9 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
     ```
   
   + po message:
-  ```
-  git log --grep="JRA-224:"
-  ```
+    ```
+    git log --grep="JRA-224:"
+    ```
   
   + po commitach dotyczacych tylko i wylacznie jedngo brancha (nie wyswietla commitow wspoldzielonych z innymi branchami):
     ```

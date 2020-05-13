@@ -67,6 +67,8 @@ Podstawowe elementy i czynnosci zwiazane z git-em
   # dla aktulnego brancha z podaniem lokalizacji repo zdalnego i nazwy zdalnego brancha
   git push [nazwa-zdalnego-repo] [nazwa-gałęzi]
   
+  git push 
+  
   # jezeli chce dla wszyskich branchow
   git push --all
   ```
@@ -74,10 +76,14 @@ Podstawowe elementy i czynnosci zwiazane z git-em
 - Wypchniecie zmian z lokalnego repo z aktulanego brancha do repo zdalngo **ZA PIERWSZYM RAZEM**.
   
   Za pierszym razem trzeba ustalic tzw. usptream-branch (Upstream branches define the branch tracked on the remote repository by your local remote branch (also called the remote tracking branch))
-    ```
-    git push --set-upstream <remote> <branch>
+  ```
+  git push --set-upstream <remote> <branch>
     ```
 
+- Jezeli chce zacząć śledzić już istniejącego zdalnego brancha
+  ````
+  git branch --set-upstream-to origin/BRANCH
+  ```
 
 - pobranie metadanych ze zdalnego repo o branchu np. w celach porownania z lokalnym repo 
   ```
@@ -85,7 +91,7 @@ Podstawowe elementy i czynnosci zwiazane z git-em
   git fetch
   
   # jezeli chce dla wszyskich branchow
-  git fetch -aall
+  git fetch -all
   ```
   
 
@@ -144,9 +150,16 @@ Polecenie diff sluzy do porownywania plikow pomiedzy modyfikacjami.
   ```
   git diff hash_7 HEAD
   ```
-
+  
+- roznica miedzy branchem obecnym i zdalnym
+  ```
+  git fetch # pobranie meta danych ze zdalnego branch-a
+  git diff <local branch> <remote>/<remote branch>
+  ```
 
 ## tracking
+
+### sledzenie nowych plikow
 
 Nie wszystkie pliki ktore mamy w katalogu repozytorium muszę być śledzone przez git-a. W szczegolnosci nowo dodane pliki nie sa automatycznie sledzone. 
 
@@ -161,9 +174,7 @@ Nie wszystkie pliki ktore mamy w katalogu repozytorium muszę być śledzone prz
 
 
 
-
-
-## gitignore
+###  gitignore
 
 -tworzenie pustego pliku (najszybsza metoda)
   ```
@@ -272,7 +283,7 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
   git branch
   ```
   
-- lista wszyskich branchow ( branche zdalne są na czerwowo)
+- lista wszyskich branchow (branche zdalne są na czerwono)
   ```
   git branch --all
   ```
@@ -357,7 +368,7 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
   ```
   git log nazwa_pliku
   ```
-
+  
 - lista commitow dla konkretnego brancha (tutaj 'master')
   ```
   git log master
@@ -365,7 +376,7 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
 
 - lista ladnie sformatowana
   ```
-  git lot --decorate
+  git log --decorate
   ```
 
 - lista uproszczona jednolinijkowa per commit (dla bardziej zwiezlego i kompaktowego output)
@@ -375,7 +386,7 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
 
 - list commitow jako drzewo (przydaje sie kiedy jest wiele branchow, mergow itp.)
   ```
-  git log --graph --oneline --decorate
+  git log --graph --oneline --decorate --all
   ```
   Przyklad output takiej drzewiastej listy:
   ```
@@ -471,12 +482,13 @@ Nie mylic branchow z repozytoriami !!!. Jedno repozytorium moze miec wiele branc
   This saves the modifications, then reapplies that patch after resetting.
   You could get merge conflicts, if you've modified things which were
   changed since the commit you reset to.
-
+  
+  Pelny przyklad na : https://www.youtube.com/watch?v=KLEDKgMmbBI&t=322s   ('Git Tutorial: Using the Stash Command' by Corey Schafer)
 
 
 - usuniecie ostatniego commitu (HAED to glowa drzewa commitow, czyli ostatni commit)
   ```
-  git reset HEAD
+  git reset HEAD~1
   ```
   
 - usuniecie 3 ostatanich commitow
